@@ -1,0 +1,429 @@
+#pyramids {
+	position: relative;
+	line-height: 1.2em;
+	margin: 0 auto;
+	width: 38em;
+	height: 27em;
+}
+
+
+/*------------------------------------*\
+	Labels
+\*------------------------------------*/
+
+/* common label properties */
+#pyramids span {
+	position: absolute;
+	color: #d9e3ec;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 1px 1px 1px #4a555e;
+	z-index: 10; /* make sure all texts z-index is higher than graphic elements */
+}
+
+/* position/style each label individually */
+#pyramids span.base {
+  top: 4.5em;
+  left: 13em;
+  width: 6em;
+}
+
+#pyramids span.auxiliary {
+  top: 6.5em;
+  left: 21.6em;
+  width: 6em;
+}
+
+#pyramids span.styles {
+  top: 11.7em;
+  left: 6.7em;
+  line-height: 2em;
+  width: 8.6em;
+
+  color: #3D7DA0;
+  text-shadow: 1px 1px 1px #cae7f7;
+}
+/* draw a background ribbon */
+#pyramids span.styles:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* make sure we can see the text in front */
+
+  width: 6em;
+  border-style: solid;
+  border-width: 0 1.35em 2em;
+  border-color: transparent transparent #AFD7ED transparent;
+}
+
+#pyramids span.layouts {
+  top: 11.7em;
+  left: 16.7em;
+  line-height: 2em;
+  width: 8.6em;
+
+  color: #8F3901;
+  text-shadow: 1px 1px 1px #F88134;
+}
+/* draw a background ribbon */
+#pyramids span.layouts:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* make sure we can see the text in front */
+
+  width: 6em;
+  border-style: solid;
+  border-width: 0 1.35em 2em;
+  border-color: transparent transparent #FF6500 transparent;
+}
+
+#pyramids span.variables {
+  top: 19.1em;
+  left: 11.7em;
+  line-height: 2em;
+  width: 8.6em;
+
+  color: #305D01;
+  text-shadow: 1px 1px 1px #91bf34;
+}
+/* draw a background line */
+#pyramids span.variables:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* make sure we can see the text in front */
+
+  width: 6em;
+  border-style: solid;
+  border-width: 0 1.35em 2em;
+  border-color: transparent transparent #5AAC06 transparent;
+}
+
+#pyramids span.mixins {
+  top: 19.1em;
+  left: 21.7em;
+  line-height: 2em;
+  width: 8.6em;
+
+  color: #9C6A0A;
+  text-shadow: 1px 1px 1px #f5cb7a;
+}
+/* draw a background line */
+#pyramids span.mixins:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* make sure we can see the text in front */
+
+  width: 6em;
+  border-style: solid;
+  border-width: 0 1.35em 2em;
+  border-color: transparent transparent #FFB932 transparent;
+}
+
+/* Plugins label */
+#pyramids span.plugins {
+	top: 25em;
+	left: 3.5em;
+	width: 6em;
+	height: 2em;
+	line-height: 2em;
+	background: #458ec7;
+
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+	border-radius: 1em;
+	color: #fff;
+	text-shadow: 1px 1px #1b4973;
+}
+
+#pyramids span.plugins:before {
+	content: "";
+	position: absolute;
+	top: -1em;
+	left: 2.6em;
+	width: .6em;
+	height: 1em;
+	background-color: #458ec7;
+}
+
+#pyramids span.plugins:after {
+	content: "";
+	position: absolute;
+	top: -2.5em;
+	left: 1.9em;
+	border-style: solid;
+	border-color: transparent transparent #458ec7 transparent;
+	border-width: 1em;
+}
+
+/* Helpers label */
+#pyramids span.helpers {
+	top: 25em;
+	left: 23em;
+	width: 6em;
+	height: 2em;
+	line-height: 2em;
+
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+	border-radius: 1em;
+	background: #2d76ae;
+	color: #fff;
+	text-shadow: 1px 1px #1b4973;
+}
+
+#pyramids span.helpers:before {
+	content: "";
+	position: absolute;
+	top: -1em;
+	left: 2.6em;
+	width: .6em;
+	height: 1em;
+	background-color: #2d76ae;
+}
+
+#pyramids span.helpers:after {
+	content: "";
+	position: absolute;
+	top: -2.5em;
+	left: 1.9em;
+	border-style: solid;
+	border-color: transparent transparent #2d76ae transparent;
+	border-width: 1em;
+}
+
+/*------------------------------------*\
+	Pyramids
+\*------------------------------------*/
+#pyramids div.base {
+	width: 0;
+	border-width: 24em 16em;
+	border-color: transparent transparent #016398 transparent;
+	border-style: solid;
+	position: absolute;
+	top: -24em;
+	z-index: 1;
+}
+
+#pyramids div.auxiliary {
+	width: 0;
+	border-width: 20.4em 13.6em;
+	border-color: transparent transparent #007abd transparent;
+	border-style: solid;
+	position: absolute;
+	top: -18.3em;
+	left: 11em;
+	z-index: 2;
+}
+
+#pyramids div.styles {
+	width: 0;
+	border-width: 15em 10em;
+	border-color: transparent transparent #038ede transparent;
+	border-style: solid;
+	position: absolute;
+	top: -7.5em;
+	left: 1em;
+	z-index: 3;
+}
+
+#pyramids div.layouts {
+	width: 0;
+	border-width: 15em 10em;
+	border-color: transparent transparent #0284cf transparent;
+	border-style: solid;
+	position: absolute;
+	top: -7.5em;
+	left: 11em;
+	z-index: 4;
+}
+
+#pyramids div.variables {
+	width: 0;
+	border-width: 7.5em 5em;
+	border-color: transparent transparent #3c95d9 transparent;
+	border-style: solid;
+	position: absolute;
+	top: 7.5em;
+	left: 11em;
+	z-index: 5;
+}
+
+#pyramids div.mixins {
+	width: 0;
+	border-width: 7.5em 5em;
+	border-color: transparent transparent #3c95d9 transparent;
+	border-style: solid;
+	position: absolute;
+	top: 7.5em;
+	left: 21em;
+	z-index: 5;
+}
+
+/*------------------------------------*\
+	Shadows
+\*------------------------------------*/
+/* shadow for labels ribbons */
+#pyramids span.styles:after,
+#pyramids span.layouts:after,
+#pyramids span.variables:after,
+#pyramids span.mixins:after {
+  content: "";
+  position: absolute;
+  z-index: -2;
+  top: 1.9em;
+  left: .4em;
+  width: 8em;
+
+  -webkit-box-shadow: 0 0 .5em 1px rgba(0, 0, 0, .77);
+  -moz-box-shadow: 0 0 .5em 1px rgba(0, 0, 0, .7);
+  -o-box-shadow: 0 0 .5em 1px rgba(0, 0, 0, .7);
+  box-shadow: 0 0 .5em 1px rgba(0, 0, 0, .7);
+}
+
+/* shadow on .base from .layouts */
+#pyramids div.base:before {
+	content: "";
+	position: absolute;
+	background: red;
+	top: 14.8em;
+	left: -7.6em;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+	width: 16em;
+	height: 0;
+
+	-webkit-box-shadow: 0 0 10px 1px black;
+	-moz-box-shadow: 0 0 10px 1px black;
+	box-shadow: 0 0 10px 1px black;
+
+	-webkit-transform: rotate(-56deg);
+	-moz-transform: rotate(-56deg);
+	-o-transform: rotate(-56deg);
+	-ms-transform: rotate(-56deg);
+	transform: rotate(-56deg);
+}
+
+/* shadow on .base from .styles */
+#pyramids div.base:after {
+	content: "";
+	position: absolute;
+	background: red;
+	top: 14em;
+	left: -8.4em;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+	width: 15em;
+
+	-webkit-box-shadow: 0 0 10px 1.5px black;
+	-moz-box-shadow: 0 0 10px 1.5px black;
+	box-shadow: 0 0 10px 1.5px black;
+
+	-webkit-transform: rotate(56deg);
+	-moz-transform: rotate(56deg);
+	-o-transform: rotate(56deg);
+	-ms-transform: rotate(56deg);
+	transform: rotate(56deg);
+}
+
+/* shadow on .auxiliary from .layouts */
+#pyramids div.auxiliary:after {
+	content: "";
+	position: absolute;
+	top: 13.1em;
+	left: -7.5em;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+	width: 17.2em;
+	height: 0;
+
+	-webkit-box-shadow: 0 0 20px 2px black;
+	-moz-box-shadow: 0 0 20px 2px black;
+	box-shadow: 0 0 20px 2px black;
+
+	-webkit-transform: rotate(56deg);
+	-moz-transform: rotate(56deg);
+	-o-transform: rotate(56deg);
+	-ms-transform: rotate(56deg);
+	transform: rotate(56deg);
+}
+
+/* shadow on .styles from .variables */
+#pyramids div.styles:before {
+	content: "";
+	position: absolute;
+	background: red;
+	top: 11.5em;
+	left: -1.5em;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+	width: 8.5em;
+	height: 0;
+
+	-webkit-box-shadow: 0 0 10px 1px black;
+	-moz-box-shadow: 0 0 10px 1px black;
+	box-shadow: 0 0 10px 1px black;
+
+	-webkit-transform: rotate(-56deg);
+	-moz-transform: rotate(-56deg);
+	-o-transform: rotate(-56deg);
+	-ms-transform: rotate(-56deg);
+	transform: rotate(-56deg);
+}
+
+/* shadow on .layouts from .variables */
+#pyramids div.layouts:before {
+	content: "";
+	position: absolute;
+	top: 11.5em;
+	left: -6.7em;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+	width: 8em;
+	height: 0;
+
+	-webkit-box-shadow: 0 0 10px 1px black;
+	-moz-box-shadow: 0 0 10px 1px black;
+	box-shadow: 0 0 10px 1px black;
+
+	-webkit-transform: rotate(56deg);
+	-moz-transform: rotate(56deg);
+	-o-transform: rotate(56deg);
+	-ms-transform: rotate(56deg);
+	transform: rotate(56deg);
+}
+
+/* shadow on .layouts from .mixins */
+#pyramids div.layouts:after {
+	content: "";
+	position: absolute;
+	background: red;
+	top: 11.5em;
+	left: -1.4em;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+	width: 8em;
+	height: 0;
+
+	-webkit-box-shadow: 0 0 10px 1px black;
+	-moz-box-shadow: 0 0 10px 1px black;
+	box-shadow: 0 0 10px 1px black;
+
+	-webkit-transform: rotate(-56deg);
+	-moz-transform: rotate(-56deg);
+	-o-transform: rotate(-56deg);
+	-ms-transform: rotate(-56deg);
+	transform: rotate(-56deg);
+}
