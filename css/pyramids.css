@@ -427,3 +427,40 @@
 	-ms-transform: rotate(-56deg);
 	transform: rotate(-56deg);
 }
+
+/*------------------------------------*\
+ * 	Misc
+\*------------------------------------*/
+@media only screen and (max-width: 480px) {
+		#pyramids {
+			font-size: 8px;
+		}
+}
+@media only screen and (min-width: 480px) {
+		#pyramids {
+			font-size: 12px;
+		}
+}
+@media only screen and (min-width: 600px) {
+	  #pyramids {
+			font-size: 14px;
+		}
+}
+/* 768px */
+@media only screen and (min-width: 768px) {
+	  #pyramids {
+		  		font-size: 16px;
+					}
+}
+/* 992px */
+@media only screen and (min-width: 992px) {
+	  #pyramids {
+		  		font-size: 18px;
+					}
+}
+/* 1382px */
+@media only screen and (min-width: 1382px) {
+	  #pyramids {
+		  		font-size: 20px;
+					}
+}
