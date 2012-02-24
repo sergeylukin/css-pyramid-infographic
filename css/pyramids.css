@@ -464,3 +464,15 @@
 		  		font-size: 20px;
 					}
 }
+
+
+/*------------------------------------*\
+ * 	Resize me image
+\*------------------------------------*/
+#resize {
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	padding: 0px;
+	margin: 0px;
+}
